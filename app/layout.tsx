@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Source_Sans_3 as Font } from 'next/font/google';
 import "./globals.css";
+import Header from "@/components/common/Header";
+import Footer from "@/components/common/Footer";
 
 const sourceSans3 = Font({
   subsets: ['latin'], // Specify the necessary subsets
@@ -16,16 +18,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${sourceSans3.className} `}
-      >
-        {children}
+      <body className={`${sourceSans3.className} min-h-screen flex flex-col`}>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
-  );
+  )
 }
