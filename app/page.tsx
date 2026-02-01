@@ -1,12 +1,15 @@
 "use client"
-import { Button } from '@/components/ui/button'
+
+import DemoSection from '@/components/Home/Demo-section'
+import HeroSection from '@/components/Home/Hero-section'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <Button> aa Home chhe</Button>
-    </div>
+    <>
+      <HeroSection />
+      <DemoSection />
+    </>
   )
 }
 
