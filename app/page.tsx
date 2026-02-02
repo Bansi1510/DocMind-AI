@@ -9,13 +9,13 @@ import React from 'react'
 
 const Page = () => {
   return (
-    <div className="flex flex-col space-y-20">
+    <>
       <HeroSection />
       <DemoSection />
       <HowItWork />
       <PricingSection />
       <CTAsection />
-    </div>
+    </>
   )
 }
 

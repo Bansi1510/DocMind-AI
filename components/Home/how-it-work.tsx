@@ -30,7 +30,7 @@ const steps = [
 const HowItWork = () => {
   return (
     <section className="bg-gray-50 flex justify-center m-0 p-0">
-      <div className="max-w-6xl w-full text-center m-0 p-0 py-2">
+      <div className="max-w-6xl w-full text-center m-0 p-0 py-5">
         {/* Heading */}
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-1">How It Works</h2>
         <p className="text-gray-500 mb-2">
