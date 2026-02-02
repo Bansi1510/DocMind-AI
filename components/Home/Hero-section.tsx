@@ -6,13 +6,13 @@ import { FileText, Sparkles, UploadCloud } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white">
+    <section className="relative overflow-hidden bg-linear-to-b from-white via-gray-50 to-white">
       {/* Background glow for AI vibe */}
       <div className="absolute inset-0 -z-10 flex justify-center">
-        <div className="h-75 w-75 rounded-full bg-red-500/20 blur-3xl -mt-20" />
+        <div className="h-75 w-75 rounded-full bg-red-500/20 blur-3xl -mt-10" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16 text-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 text-center">
         {/* Badge */}
         <div className="mx-auto mb-4 inline-flex items-center gap-2 rounded-full border px-4 py-1 text-sm text-muted-foreground">
           <Sparkles className="h-4 w-4 text-red-500" />
@@ -44,7 +44,7 @@ const HeroSection = () => {
         </div>
 
         {/* Trust / Security line */}
-        <p className="mt-6 text-sm text-muted-foreground">
+        <p className="mt-2 text-sm text-muted-foreground">
           Fast, Secure, No credit card required
         </p>
       </div>
