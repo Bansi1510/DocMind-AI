@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { FileText, ArrowRight, ArrowLeft } from "lucide-react";
@@ -29,7 +28,7 @@ const demoCards = [
 
 const DemoSection = () => {
   return (
-    <section className="bg-gray-50 py-10 relative">
+    <section className="bg-gray-50 py-5 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 text-center">
         {/* Section Title */}
         <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
