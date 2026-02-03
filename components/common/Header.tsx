@@ -4,10 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { FileText } from "lucide-react";
 import NavLink from "./Nav-link";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 
 const Header = () => {
-  const isLoggedIn = false;
 
   return (
     <header className="w-full border-b bg-transparent">
@@ -26,19 +26,19 @@ const Header = () => {
           {/* Navigation */}
           <nav className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium">
             <NavLink href="/pricing">Pricing</NavLink>
-            <NavLink href="/summaries">Your Summaries</NavLink>
+            <SignedIn> <NavLink href="/summaries">Your Summaries</NavLink></SignedIn>
           </nav>
 
           {/* Auth */}
           <div className="flex items-center gap-3 whitespace-nowrap">
-            {isLoggedIn ? (
-              <>
-                <span className="text-sm font-medium text-green-600">Pro</span>
-                <NavLink href="/upload">Upload PDF</NavLink>
-              </>
-            ) : (
+            <SignedIn>
+              <span className="text-sm font-medium text-green-600">Pro</span>
+              <UserButton />
+              <NavLink href="/upload">Upload PDF</NavLink>
+            </SignedIn>
+            <SignedOut>
               <NavLink href="/sign-in">Sign in</NavLink>
-            )}
+            </SignedOut>
           </div>
 
         </div>
